@@ -2,3 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.highlight {
+  @apply font-semibold border-b border-yellow-200 bg-yellow-200/10 p-px;
+}
