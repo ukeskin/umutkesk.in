@@ -1,6 +1,7 @@
+import React from "react";
 import Head from "next/head";
-import Link from "next/link";
-import Logo from "../../assets/svgs/logo.svg";
+import Nav from "components/Nav";
+
 import { allPosts, Post } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
@@ -24,21 +25,20 @@ export async function getStaticProps({ params }) {
 const PostLayout = ({ post }) => {
   const MDXContent = useMDXComponent(post.body.code);
 
+  const ogImage = "https://umutkesk.in/api/og?title=" + post.title;
+
   return (
-    <div className="px-4">
-      <header className="max-w-2xl mx-auto flex items-center py-8 bg-[#121212] mb-4">
-        <Link href="/">
-          <Logo className="w-12 mr-4 cursor-pointer" />
-        </Link>
-        <h2 className="pl-3 border-l-2 border-red-600">Public Notes</h2>
-      </header>
-      <article className="max-w-2xl mx-auto">
-        <Head>
-          <title>{post.title}</title>
-        </Head>
-        <h1>{post.title}</h1>
-        <MDXContent />
-      </article>
+    <div className="max-w-4xl mx-auto">
+      <Head>
+        <title>{post.title}</title>
+        <meta property="og:image" content={ogImage} />
+      </Head>
+      <div className="px-4 relative">
+        <Nav title={post.title} />
+        <article className="prose dark:prose-invert mb-20 mx-auto">
+          <MDXContent />
+        </article>
+      </div>
     </div>
   );
 };

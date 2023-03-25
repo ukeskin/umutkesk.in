@@ -15,12 +15,6 @@ const Home = () => {
           content="Umut Keskin's personal website. I'm a software developer based in Istanbul, Turkey. I'm currently working at egaranti as a Frontend Developer. I'm interested in web development, I'm also a big fan of open source."
         />
         <link rel="icon" href="/favicon.ico" />
-        <script
-          async
-          defer
-          data-website-id="6e2d5876-59d9-4702-b422-0791399569c5"
-          src="https://umami-omega-three.vercel.app/umami.js"
-        ></script>
       </Head>
       <div>
         <Nav />

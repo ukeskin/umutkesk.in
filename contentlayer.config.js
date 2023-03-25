@@ -2,7 +2,7 @@ import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import { remarkCodeHike } from "@code-hike/mdx";
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
-const theme = require("shiki/themes/dark-plus.json");
+const theme = require("shiki/themes/monokai.json");
 
 const Post = defineDocumentType(() => ({
   name: "Post",
@@ -12,6 +12,11 @@ const Post = defineDocumentType(() => ({
     title: {
       type: "string",
       description: "The title of the post",
+      required: true,
+    },
+    date: {
+      type: "date",
+      description: "The date of the post",
       required: true,
     },
   },

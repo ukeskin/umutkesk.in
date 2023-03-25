@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import SunIcon from "../assets/svgs/sun.svg";
 import MoonIcon from "../assets/svgs/moon.svg";
+import Logo from "../assets/svgs/logo.svg";
+import { motion } from "framer-motion";
 
 const Nav = (props) => {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -12,10 +14,23 @@ const Nav = (props) => {
   };
 
   return (
-    <nav className="container mx-auto flex h-20 items-center justify-between w-full p-4">
-      <Link href="/">
-        <a></a>
-      </Link>
+    <motion.nav
+      className="max-w-4xl mx-auto flex items-center py-8 bg-white/60 dark:bg-[#121212]/60 mb-4 sticky top-0 left-0 justify-between"
+      style={{ backdropFilter: "blur(2px)" }}
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+    >
+      <div
+        className="flex items-center"
+      >
+        <Link href="/">
+          <Logo className="w-12 mr-4 cursor-pointer" />
+        </Link>
+        <h2 className="pl-3 border-l-2 border-red-600d dark:border-red-600 text-md font-bold">
+          {props.title}
+        </h2>
+      </div>
       <div>
         <button
           className="flex items-center justify-center bg-transparent text-gray-800 font-semibold hover:text-gray-900 p-4 rounded-full"
@@ -28,7 +43,7 @@ const Nav = (props) => {
           )}
         </button>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

@@ -10,6 +10,7 @@ export default function MyApp({ Component, pageProps }) {
         strategy="afterInteractive"
         data-website-id="6e2d5876-59d9-4702-b422-0791399569c5"
         src="https://umami-omega-three.vercel.app/umami.js"
+        data-domains="umutkesk.in"
       />
       <Component {...pageProps} />
     </ThemeProvider>
