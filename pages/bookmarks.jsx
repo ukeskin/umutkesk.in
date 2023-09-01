@@ -64,6 +64,7 @@ const Bookmarks = () => {
                     width={100}
                     height={100}
                     cover
+                    alt={item.title}
                   />
                 ) : (
                   <div className="w-full h-32 bg-gray-800 rounded-t-lg"></div>
