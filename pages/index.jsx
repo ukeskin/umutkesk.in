@@ -4,7 +4,6 @@ import Hero from "components/Hero";
 import Projects from "components/Projects";
 import Notes from "components/Notes";
 import About from "components/About";
-import Link from "next/link";
 
 const Home = () => {
   return (
@@ -25,7 +24,6 @@ const Home = () => {
         <About />
         <Projects />
         <Notes />
-        <Link href="/bookmarks">Bookmarks</Link>
       </div>
     </div>
   );
