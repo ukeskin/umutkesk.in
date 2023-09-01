@@ -4,6 +4,7 @@ import Hero from "components/Hero";
 import Projects from "components/Projects";
 import Notes from "components/Notes";
 import About from "components/About";
+import Bookmarks from "components/Bookmarks";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <div className="flex flex-col gap-20">
         <About />
         <Projects />
+        <Bookmarks />
         <Notes />
       </div>
     </div>
