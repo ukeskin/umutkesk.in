@@ -22,8 +22,8 @@ export default function Projects({}) {
       <Link className="cursor-pointer" href="/bookmarks">
         <h2 className="text-3xl mb-4">Bookmarks</h2>
       </Link>
-      {/* carousel  */}
       <div class="grid md:grid-cols-3 grid-cols-1 gap-3">
+        {data.length === 0 && <Loading />}
         {data.map((item, index) => (
           <Link href={item.link} key={index}>
             <BookMarkCard item={item} />
@@ -31,7 +31,7 @@ export default function Projects({}) {
         ))}
         {/* show more button link to bookmarks */}
         <Link className="cursor-pointer" href="/bookmarks">
-          <div className="flex gap-2 py-5 px-4 border border-gray-800 p-4 rounded-lg items-center justify-center hover:bg-gray-800 transition-all cursor-pointer">
+          <div className="flex gap-2 py-5 px-4 border border-gray-400 text-gray-400 p-4 rounded-lg items-center justify-center hover:bg-gray-500 hover:text-gray-100 transition-all cursor-pointer dark:hover:bg-gray-200 dark:hover:text-gray-800">
             See more
           </div>
         </Link>

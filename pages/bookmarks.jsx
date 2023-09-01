@@ -1,8 +1,11 @@
-import Nav from "components/Nav";
+import React, { useEffect } from "react";
 import { getAllBookmarks } from "lib/raindrop";
+
 import Head from "next/head";
 import Link from "next/link";
-import React, { useEffect } from "react";
+
+import Nav from "components/Nav";
+import Loading from "components/Loading";
 
 const Bookmarks = () => {
   const [data, setData] = React.useState([]);
@@ -48,6 +51,7 @@ const Bookmarks = () => {
           them.
         </p>
         <div className="grid md:grid-cols-3 grid-cols-1 gap-3">
+          {data.length === 0 && <Loading />}
           {data.map((item, index) => (
             <Link href={item.link} key={index}>
               <div className="flex flex-col gap-2 border rounded-lg cursor-pointer">
