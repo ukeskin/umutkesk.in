@@ -12,6 +12,10 @@ const nextConfig = {
     });
     return config;
   },
+  env: {
+    RAINDROP_CLIENT_SECRET: process.env.RAINDROP_CLIENT_SECRET,
+  },
+  domains: ["rdl.ink"],
 };
 
 module.exports = withContentlayer(nextConfig);
