@@ -15,7 +15,7 @@ const Nav = (props) => {
 
   return (
     <motion.nav
-      className="max-w-4xl mx-auto flex items-center py-8  mb-4 sticky top-0 left-0 justify-between"
+      className="max-w-4xl mx-auto flex items-center py-8  mb-4 justify-between"
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
