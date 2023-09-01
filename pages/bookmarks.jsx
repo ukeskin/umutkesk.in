@@ -8,19 +8,7 @@ import Nav from "components/Nav";
 import Loading from "components/Loading";
 import Image from "next/image";
 
-const Bookmarks = () => {
-  const [data, setData] = React.useState([]);
-
-  useEffect(() => {
-    getAllBookmarks()
-      .then((data) => {
-        setData(data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-
+const Bookmarks = ({ data }) => {
   return (
     <div className="max-w-4xl mx-auto p-4">
       <Head>
@@ -52,8 +40,8 @@ const Bookmarks = () => {
           them.
         </p>
         <div className="grid md:grid-cols-3 grid-cols-1 gap-3">
-          {data.length === 0 && <Loading />}
-          {data.map((item, index) => (
+          {data?.length === 0 && <Loading />}
+          {data?.map((item, index) => (
             <Link href={item.link} key={index}>
               <div className="flex flex-col gap-2 border rounded-lg cursor-pointer">
                 {item.cover !== "null" ? (
@@ -83,3 +71,12 @@ const Bookmarks = () => {
 };
 
 export default Bookmarks;
+
+export async function getStaticProps() {
+  // Instead of fetching your `/api` route you can call the same
+  // function directly in `getStaticProps`
+  const data = await getAllBookmarks();
+
+  // Props returned will be passed to the page component
+  return { props: { data } };
+}

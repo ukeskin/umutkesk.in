@@ -24,8 +24,8 @@ export default function Projects({}) {
         <h2 className="text-3xl mb-4">Bookmarks</h2>
       </Link>
       <div className="grid md:grid-cols-3 grid-cols-1 gap-3">
-        {data.length === 0 && <Loading />}
-        {data.map((item, index) => (
+        {data?.length === 0 && <Loading />}
+        {data?.map((item, index) => (
           <Link href={item.link} key={index}>
             <BookMarkCard item={item} />
           </Link>
@@ -52,7 +52,6 @@ const BookMarkCard = ({ item }) => {
           width={100}
           height={100}
           cover
-          alt={item.title}
         />
       )}
       <div className="flex flex-col px-1 py-3">
