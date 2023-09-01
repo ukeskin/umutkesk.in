@@ -1,5 +1,7 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+
+import Loading from "./Loading";
 
 export default function Projects({}) {
   const [worksData, setWorksData] = React.useState([]);
@@ -19,6 +21,7 @@ export default function Projects({}) {
     <section>
       <h2 className="text-3xl">Projects</h2>
       <div className="grid mt-4 grid-cols-1 md:grid-cols-3 gap-4">
+        {worksData.length === 0 && <Loading />}
         {worksData.map((work, index) => (
           <Link href={work.link} key={index}>
             <div className="flex w-full flex-col justify-center border rounded-lg hover:border-gray-700 transition-all cursor-pointer">

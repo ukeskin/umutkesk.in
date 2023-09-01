@@ -32,8 +32,11 @@ const PostLayout = ({ post }) => {
       <Head>
         <title>{post.title}</title>
         <meta property="og:image" content={ogImage} />
-        <meta name="twitter:image" content={ogImage} />
-        <meta name="linkedin:image" content={ogImage} />
+        <meta property="og:image:alt" content={post.title} />
+        <meta property="og:image:type" content="image/png" />
+
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
       </Head>
       <div className="px-4 relative">
         <Nav title={post.title} />
