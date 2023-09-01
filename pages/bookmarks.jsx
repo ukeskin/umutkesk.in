@@ -6,6 +6,7 @@ import Link from "next/link";
 
 import Nav from "components/Nav";
 import Loading from "components/Loading";
+import Image from "next/image";
 
 const Bookmarks = () => {
   const [data, setData] = React.useState([]);
@@ -56,9 +57,13 @@ const Bookmarks = () => {
             <Link href={item.link} key={index}>
               <div className="flex flex-col gap-2 border rounded-lg cursor-pointer">
                 {item.cover !== "null" ? (
-                  <img
-                    src={item.cover || ""}
-                    className="w-full object-cover rounded-t-lg"
+                  <Image
+                    src={item.cover}
+                    className="object-cover rounded-t-lg"
+                    unoptimized={true}
+                    width={100}
+                    height={100}
+                    cover
                   />
                 ) : (
                   <div className="w-full h-32 bg-gray-800 rounded-t-lg"></div>

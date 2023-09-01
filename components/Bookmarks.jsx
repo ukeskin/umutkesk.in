@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import Loading from "./Loading";
 import { getLastBookmarks } from "lib/raindrop";
+import Image from "next/image";
 
 export default function Projects({}) {
   const [data, setData] = React.useState([]);
@@ -44,7 +45,14 @@ const BookMarkCard = ({ item }) => {
   return (
     <div className="flex gap-2 border  rounded-lg cursor-pointer">
       {item.cover && (
-        <img src={item.cover} className="w-10 object-cover rounded-l-md" />
+        <Image
+          src={item.cover}
+          className="object-cover rounded-l-md"
+          unoptimized={true}
+          width={100}
+          height={100}
+          cover
+        />
       )}
       <div className="flex flex-col px-1 py-3">
         <div className="font-semibold text-sm">{item.title}</div>
