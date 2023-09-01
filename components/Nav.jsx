@@ -15,15 +15,12 @@ const Nav = (props) => {
 
   return (
     <motion.nav
-      className="max-w-4xl mx-auto flex items-center py-8 bg-white/60 dark:bg-[#121212]/60 mb-4 sticky top-0 left-0 justify-between"
-      style={{ backdropFilter: "blur(2px)" }}
+      className="max-w-4xl mx-auto flex items-center py-8  mb-4 sticky top-0 left-0 justify-between"
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
     >
-      <div
-        className="flex items-center"
-      >
+      <div className="flex items-center">
         <Link href="/">
           <Logo className="w-12 mr-4 cursor-pointer" />
         </Link>
