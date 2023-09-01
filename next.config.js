@@ -15,8 +15,6 @@ const nextConfig = {
   env: {
     RAINDROP_CLIENT_SECRET: process.env.RAINDROP_CLIENT_SECRET,
   },
-  domains:
-    
 };
 
 module.exports = withContentlayer(nextConfig);
