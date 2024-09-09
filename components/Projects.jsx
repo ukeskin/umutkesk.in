@@ -7,7 +7,7 @@ export default function Projects({}) {
   const [worksData, setWorksData] = React.useState([]);
 
   React.useEffect(() => {
-    fetch("https://gh-pinned-repos.egoist.dev/?username=ukeskin")
+    fetch("https://gh-pinned-repos-tsj7ta5xfhep.deno.dev/?username=ukeskin")
       .then((res) => res.json())
       .then((data) => {
         setWorksData(data);
