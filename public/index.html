@@ -4,91 +4,215 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Umut Keskin</title>
+    <style>
+      body {
+        background: #c0c0c0;
+        font-family: "Tahoma", "MS Sans Serif", sans-serif;
+        margin: 20px;
+        color: #000;
+      }
+      .window {
+        background: #ece9d8;
+        border: 2px outset #dfdfdf;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0;
+        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+      }
+      .title-bar {
+        background: linear-gradient(to right, #0054e3, #2e8aff);
+        padding: 3px 5px;
+        color: white;
+        font-weight: bold;
+        font-size: 12px;
+        border-bottom: 2px solid #fff;
+      }
+      .content {
+        padding: 15px;
+        background: #ece9d8;
+      }
+      a {
+        color: #0000ee;
+        text-decoration: underline;
+      }
+      a:visited {
+        color: #551a8b;
+      }
+      h2 {
+        background: #000080;
+        color: white;
+        padding: 4px 8px;
+        font-size: 14px;
+        margin: 15px -5px 10px -5px;
+        border: 1px outset #000080;
+      }
+      hr {
+        border: 1px inset #808080;
+      }
+      #bookmarks-container {
+        background: white;
+        border: 2px inset #808080;
+        padding: 10px;
+        margin: 10px 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+      }
+      .bookmark-card {
+        border: 2px outset #dfdfdf;
+        background: #f0f0f0;
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
+        color: #000;
+      }
+      .bookmark-card:hover {
+        background: #e0e0e0;
+        border: 2px outset #bbb;
+      }
+      .bookmark-card img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        display: block;
+        border-bottom: 1px solid #808080;
+      }
+      .bookmark-info {
+        padding: 8px;
+      }
+      .bookmark-title {
+        font-weight: bold;
+        font-size: 12px;
+        margin-bottom: 4px;
+        color: #000080;
+      }
+      .bookmark-excerpt {
+        font-size: 11px;
+        color: #333;
+        line-height: 1.3;
+      }
+      .bookmark-tags {
+        font-size: 10px;
+        color: #666;
+        margin-top: 4px;
+      }
+      ul {
+        line-height: 1.6;
+      }
+      details {
+        background: #f0f0f0;
+        border: 1px solid #808080;
+        padding: 5px;
+        margin: 10px 0;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: bold;
+        padding: 3px;
+        background: #d4d0c8;
+        border: 1px outset #808080;
+      }
+      pre {
+        background: #000;
+        color: #0f0;
+        padding: 10px;
+        border: 1px inset #000;
+        overflow-x: auto;
+      }
+    </style>
   </head>
   <body>
-    <center>
-      <h1>Umut Keskin</h1>
-      <p><i>I love to build cool stuff.</i></p>
-      <hr />
-    </center>
+    <div class="window">
+      <div class="title-bar">umutkesk.in - Microsoft Internet Explorer</div>
+      <div class="content">
+        <center>
+          <h1>Umut Keskin</h1>
+          <p><i>I love to build cool stuff.</i></p>
+          <hr />
+        </center>
 
-    <h2>About</h2>
-    <p>
-      Frontend Developer with focus on <b>ReactJS</b> library. Worked on several
-      personal projects using <b>Javascript</b>, <b>ReactJS</b>, <b>NextJS</b>,
-      <b>Node.JS</b>, <b>ExpressJS</b>, <b>TailwindCSS</b>, <b>SCSS</b>, and
-      other technologies with Accessibility, Responsive Design and Mobile First
-      Approaches being my main focus.
-    </p>
-    <p>
-      Currently working at <b>egaranti</b> as a Frontend Developer in Istanbul,
-      Turkey.
-    </p>
+        <h2>About</h2>
+        <p>
+          Frontend Developer with focus on <b>ReactJS</b> library. Worked on
+          several personal projects using <b>Javascript</b>, <b>ReactJS</b>,
+          <b>NextJS</b>, <b>Node.JS</b>, <b>ExpressJS</b>, <b>TailwindCSS</b>,
+          <b>SCSS</b>, and other technologies with Accessibility, Responsive
+          Design and Mobile First Approaches being my main focus.
+        </p>
+        <p>
+          Currently working at <b>egaranti</b> as a Frontend Developer in
+          Istanbul, Turkey.
+        </p>
 
-    <h2>Links</h2>
-    <ul>
-      <li>
-        <a href="https://www.linkedin.com/in/umutdev/" target="_blank"
-          >LinkedIn</a
-        >
-      </li>
-      <li>
-        <a href="https://www.twitter.com/umutkesk1n/" target="_blank"
-          >Twitter</a
-        >
-      </li>
-      <li>
-        <a href="https://www.github.com/ukeskin/" target="_blank">Github</a>
-      </li>
-    </ul>
+        <h2>Links</h2>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/umutdev/" target="_blank"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a href="https://www.github.com/ukeskin/" target="_blank">Github</a>
+          </li>
+        </ul>
 
-    <h2>Bookmarks</h2>
-    <p><i>Cool stuff I found on the internet</i></p>
-    <div id="bookmarks-container">
-      <p>Loading bookmarks...</p>
+        <h2>Bookmarks</h2>
+        <p><i>Cool stuff I found on the internet</i></p>
+        <div id="bookmarks-container">
+          <p>Loading bookmarks...</p>
+        </div>
+        <hr />
+        <center>
+          <small>
+            I'm interested in web development, I'm also a big fan of open
+            source.
+          </small>
+        </center>
+
+        <script>
+          fetch("/api/bookmarks")
+            .then((res) => res.json())
+            .then((bookmarks) => {
+              const container = document.getElementById("bookmarks-container");
+              if (bookmarks.length === 0) {
+                container.innerHTML = "<p>No bookmarks yet.</p>";
+                return;
+              }
+
+              let html = "";
+              bookmarks.forEach((bookmark) => {
+                html += '<a href="' + bookmark.link + '" target="_blank" class="bookmark-card">';
+
+                if (bookmark.cover && bookmark.cover !== '' && bookmark.cover !== 'null') {
+                  html += '<img src="' + bookmark.cover + '" alt="' + bookmark.title + '">';
+                } else {
+                  html += '<div style="width:100%;height:120px;background:#000080;display:flex;align-items:center;justify-content:center;color:white;font-size:48px;border-bottom:1px solid #808080;">📄</div>';
+                }
+
+                html += '<div class="bookmark-info">';
+                html += '<div class="bookmark-title">' + bookmark.title + '</div>';
+
+                if (bookmark.excerpt) {
+                  html += '<div class="bookmark-excerpt">' + bookmark.excerpt.substring(0, 80) + (bookmark.excerpt.length > 80 ? '...' : '') + '</div>';
+                }
+
+                if (bookmark.tags && bookmark.tags.length > 0) {
+                  html += '<div class="bookmark-tags">[' + bookmark.tags.slice(0, 3).join(', ') + ']</div>';
+                }
+
+                html += '</div>';
+                html += '</a>';
+              });
+
+              container.innerHTML = html;
+            })
+            .catch((err) => {
+              console.error("Failed to load bookmarks:", err);
+              document.getElementById("bookmarks-container").innerHTML =
+                "<p>Failed to load bookmarks.</p>";
+            });
+        </script>
+      </div>
     </div>
-    <hr />
-    <center>
-      <small>
-        I'm interested in web development, I'm also a big fan of open source.
-      </small>
-    </center>
-
-    <script>
-      fetch("/api/bookmarks")
-        .then((res) => res.json())
-        .then((bookmarks) => {
-          const container = document.getElementById("bookmarks-container");
-          if (bookmarks.length === 0) {
-            container.innerHTML = "<p>No bookmarks yet.</p>";
-            return;
-          }
-
-          let html = "<ul>";
-          bookmarks.forEach((bookmark) => {
-            html += "<li>";
-            html +=
-              '<a href="' +
-              bookmark.link +
-              '" target="_blank"><b>' +
-              bookmark.title +
-              "</b></a>";
-            if (bookmark.excerpt) {
-              html += " - " + bookmark.excerpt;
-            }
-            if (bookmark.tags && bookmark.tags.length > 0) {
-              html += " <small>[" + bookmark.tags.join(", ") + "]</small>";
-            }
-            html += "</li>";
-          });
-          html += "</ul>";
-          container.innerHTML = html;
-        })
-        .catch((err) => {
-          console.error("Failed to load bookmarks:", err);
-          document.getElementById("bookmarks-container").innerHTML =
-            "<p>Failed to load bookmarks.</p>";
-        });
-    </script>
   </body>
 </html>
