@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umut Keskin</title>
+</head>
+<body>
+    <center>
+        <h1>Umut Keskin</h1>
+        <p><i>I love to build cool stuff.</i></p>
+        <hr>
+    </center>
+
+    <h2>About</h2>
+    <p>
+        Frontend Developer with focus on <b>ReactJS</b> library.
+        Worked on several personal projects using <b>Javascript</b>, <b>ReactJS</b>,
+        <b>NextJS</b>, <b>Node.JS</b>, <b>ExpressJS</b>, <b>TailwindCSS</b>,
+        <b>SCSS</b>, and other technologies with Accessibility,
+        Responsive Design and Mobile First Approaches being my main focus.
+    </p>
+    <p>
+        Currently working at <b>egaranti</b> as a Frontend Developer in Istanbul, Turkey.
+    </p>
+
+    <h2>Links</h2>
+    <ul>
+        <li><a href="https://www.linkedin.com/in/umutdev/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://www.twitter.com/umutkesk1n/" target="_blank">Twitter</a></li>
+        <li><a href="https://www.github.com/ukeskin/" target="_blank">Github</a></li>
+    </ul>
+
+    <h2>Blog Posts</h2>
+
+    <h3>Are code agents doing magic? (2025)</h3>
+    <p><i>Spoiler: They mostly read & write files in a loop—no wands required.</i></p>
+    <p>
+        Before we dive in, export an environment variable so the agent can talk to OpenRouter.
+        Below is a minimal JavaScript agent built in four scroll steps. As you read, the code grows side‑by‑side with the explanation.
+    </p>
+    <details>
+        <summary>Read more...</summary>
+        <p>Code agents are just <b>LLM → tool → LLM</b> loops. A couple of file‑system functions already unlock powerful workflows.</p>
+        <pre>
+// Minimal toolset
+const tools = {
+  read_file: async ({ path }) => await fs.readFile(path, "utf8"),
+  write_file: async ({ path, content }) => {
+    await fs.writeFile(path, content)
+    return "OK"
+  },
+}
+        </pre>
+    </details>
+
+    <hr>
+
+    <h3>Enhancing form Accessibility with aria-live (2024)</h3>
+    <p>
+        <b>aria-live</b> is an ARIA attribute used to define regions of a web page that should be communicated
+        to the user by assistive technologies, such as screen readers, as they are updated or changed dynamically.
+    </p>
+    <details>
+        <summary>Read more...</summary>
+        <p>
+            The issue arises because aria-live regions are often not dynamically updated in a way that
+            triggers screen readers to announce the changes. To ensure that screen readers announce the
+            alert message, we need to define the alert as an aria-live region with an appropriate aria-live attribute.
+        </p>
+        <pre>
+&lt;form id="myForm" onsubmit="return validateForm(event)"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name" /&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+&lt;div role="status" aria-live="assertive" id="alertMessage"&gt;&lt;/div&gt;
+        </pre>
+    </details>
+
+    <hr>
+
+    <h3>Why I Use Tailwind CSS when building UI (2023)</h3>
+    <p>
+        Web development can be overwhelming, especially when it comes to designing and styling a website.
+        In this post, I'll be sharing why I love using Tailwind CSS and why it's my go-to framework for web development.
+    </p>
+    <details>
+        <summary>Read more...</summary>
+        <p>
+            One of the best things about Tailwind CSS is its flexibility and customization options.
+            The pre-designed CSS classes are consistent across all projects, making it easier to maintain a
+            cohesive style across different pages and sections of a website.
+        </p>
+        <p>
+            In today's world, mobile responsiveness is crucial for any website. Tailwind CSS includes a variety
+            of responsive design classes that make it easy to create mobile-friendly layouts.
+        </p>
+    </details>
+
+    <hr>
+    <center>
+        <small>
+            I'm interested in web development, I'm also a big fan of open source.
+        </small>
+    </center>
+</body>
+</html>
