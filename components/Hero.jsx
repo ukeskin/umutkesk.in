@@ -22,14 +22,6 @@ export default function Hero({}) {
           <a
             target={"_blank"}
             rel="noreferrer"
-            href="https://www.twitter.com/umutkesk1n/"
-            className="bg-blue-200 text-blue-800 px-2 py-1 rounded"
-          >
-            Twitter
-          </a>
-          <a
-            target={"_blank"}
-            rel="noreferrer"
             href="https://www.github.com/ukeskin/"
             className="bg-gray-300 text-gray-700 px-2 py-1 rounded"
           >
