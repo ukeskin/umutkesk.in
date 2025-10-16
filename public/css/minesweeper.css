@@ -1,0 +1,139 @@
+/* Minesweeper Game Styles */
+.game-header {
+  background: #c0c0c0;
+  border: 3px inset #808080;
+  padding: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.counter {
+  background: #000;
+  color: #ff0000;
+  font-family: "Courier New", monospace;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 2px inset #808080;
+  min-width: 60px;
+  text-align: center;
+}
+
+.reset-button {
+  width: 40px;
+  height: 40px;
+  background: #c0c0c0;
+  border: 3px outset #dfdfdf;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reset-button:active {
+  border-style: inset;
+}
+
+.board {
+  background: #c0c0c0;
+  border: 3px inset #808080;
+  padding: 5px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.board-container {
+  text-align: center;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  background: #c0c0c0;
+  border: 3px outset #dfdfdf;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.cell:focus {
+  outline: 2px solid #000;
+  outline-offset: -2px;
+}
+
+.cell.revealed {
+  border: 1px solid #808080;
+  background: #c0c0c0;
+  border-style: solid;
+}
+
+.cell.flagged {
+  background: #c0c0c0;
+}
+
+.cell.mine {
+  background: #ff0000;
+}
+
+.cell.number-1 { color: #0000ff; }
+.cell.number-2 { color: #008000; }
+.cell.number-3 { color: #ff0000; }
+.cell.number-4 { color: #000080; }
+.cell.number-5 { color: #800000; }
+.cell.number-6 { color: #008080; }
+.cell.number-7 { color: #000; }
+.cell.number-8 { color: #808080; }
+
+.controls {
+  background: #f0f0f0;
+  border: 2px inset #808080;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.controls h3 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  background: #000080;
+  color: white;
+  padding: 2px 5px;
+}
+
+.controls ul {
+  margin: 5px 0;
+  padding-left: 20px;
+}
+
+.controls li {
+  margin: 3px 0;
+}
+
+.difficulty-buttons {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.difficulty-button {
+  background: #c0c0c0;
+  border: 2px outset #dfdfdf;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+  font-size: 12px;
+}
+
+.difficulty-button:active,
+.difficulty-button.active {
+  border-style: inset;
+}

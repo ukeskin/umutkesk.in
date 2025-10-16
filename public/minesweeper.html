@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/minesweeper.css" />
+  </head>
+  <body>
+    <div class="window">
+      <div class="title-bar">
+        <span>Minesweeper</span>
+        <div class="title-bar-buttons">
+          <a href="/" class="title-bar-button" title="Return to homepage">
+            ←
+          </a>
+        </div>
+      </div>
+      <div class="content">
+        <h1 style="text-align: center; margin-top: 0;">Minesweeper</h1>
+
+        <div class="difficulty-buttons">
+          <button class="difficulty-button active" onclick="setDifficulty('easy')" aria-pressed="true" id="btn-easy">
+            Easy (8x8)
+          </button>
+          <button class="difficulty-button" onclick="setDifficulty('medium')" aria-pressed="false" id="btn-medium">
+            Medium (12x12)
+          </button>
+          <button class="difficulty-button" onclick="setDifficulty('hard')" aria-pressed="false" id="btn-hard">
+            Hard (16x16)
+          </button>
+        </div>
+
+        <div class="game-header">
+          <div class="counter" id="mine-counter" aria-live="polite" aria-label="Remaining mines">010</div>
+          <button
+            class="reset-button"
+            onclick="resetGame()"
+            aria-label="New game"
+            title="New game (N key)"
+          >
+            🙂
+          </button>
+          <div class="counter" id="timer" aria-live="polite" aria-label="Elapsed time">000</div>
+        </div>
+
+        <div
+          class="board-container"
+          role="application"
+          aria-label="Minesweeper game board"
+        >
+          <div id="board" class="board" role="grid"></div>
+        </div>
+
+        <!-- Screen reader announcements -->
+        <div
+          id="game-status"
+          class="sr-only"
+          role="status"
+          aria-live="assertive"
+          aria-atomic="true"
+        ></div>
+
+        <div class="controls">
+          <h3>Controls</h3>
+          <ul>
+            <li><strong>Arrow keys:</strong> Navigate between cells</li>
+            <li><strong>Space:</strong> Reveal cell</li>
+            <li><strong>F key:</strong> Place/remove flag</li>
+            <li><strong>N key:</strong> New game</li>
+            <li><strong>Tab:</strong> Navigate controls</li>
+            <li><strong>Left click:</strong> Reveal cell</li>
+            <li><strong>Right click:</strong> Place/remove flag</li>
+          </ul>
+          <p><strong>Goal:</strong> Reveal all cells without mines. Numbers indicate adjacent mines.</p>
+        </div>
+
+        <p style="text-align: center; margin-top: 15px;">
+          <a href="/">← Return to homepage</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="/js/minesweeper.js"></script>
+  </body>
+</html>

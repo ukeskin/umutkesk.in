@@ -1,0 +1,127 @@
+/* Windows XP Theme Base Styles */
+body {
+  background: #c0c0c0;
+  font-family: "Tahoma", "MS Sans Serif", sans-serif;
+  margin: 20px;
+  color: #000;
+}
+
+.window {
+  background: #ece9d8;
+  border: 2px outset #dfdfdf;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: transform 0.05s ease-out;
+}
+
+.window.dragging {
+  cursor: move;
+  user-select: none;
+}
+
+.title-bar {
+  background: linear-gradient(to right, #0054e3, #2e8aff);
+  padding: 3px 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  border-bottom: 2px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+  user-select: none;
+}
+
+.title-bar-buttons {
+  display: flex;
+  gap: 2px;
+}
+
+.title-bar-button {
+  width: 16px;
+  height: 14px;
+  background: #ece9d8;
+  border: 1px outset #dfdfdf;
+  color: #000;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.title-bar-button:hover {
+  background: #f0f0f0;
+}
+
+.content {
+  padding: 15px;
+  background: #ece9d8;
+}
+
+a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #551a8b;
+}
+
+h2 {
+  background: #000080;
+  color: white;
+  padding: 4px 8px;
+  font-size: 14px;
+  margin: 15px -5px 10px -5px;
+  border: 1px outset #000080;
+}
+
+hr {
+  border: 1px inset #808080;
+}
+
+ul {
+  line-height: 1.6;
+}
+
+details {
+  background: #f0f0f0;
+  border: 1px solid #808080;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 3px;
+  background: #d4d0c8;
+  border: 1px outset #808080;
+}
+
+pre {
+  background: #000;
+  color: #0f0;
+  padding: 10px;
+  border: 1px inset #000;
+  overflow-x: auto;
+}
+
+/* Utility Classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
